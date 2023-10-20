@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "isc0rlrCNU8ixfg4L3OOSNky85j4jktYu+JmZPBdVBB42+eH9Pk2UQba0eHYYXUkcNf2E7TVJfxSEOBTImf5pQ==",
+  "dgSpecHash": "+OcLX9plFvw3uMWknNrM7uTP9lrkJnHTyEREl01qH6du7HNUojwOtaOnZIQEeFugS9LoVeZ4+ULMa/neicXbIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MorjanM\\RiderProjects\\customManagementDemo\\CustomManagementDemo.API\\CustomManagementDemo.API.csproj",
+  "projectFilePath": "C:\\Users\\MorjanM\\OneDrive\\Desktop\\customManagementDemo\\CustomManagementDemo.API\\CustomManagementDemo.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MorjanM\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\MorjanM\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

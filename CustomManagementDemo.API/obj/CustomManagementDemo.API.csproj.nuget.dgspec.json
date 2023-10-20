@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MorjanM\\RiderProjects\\customManagementDemo\\CustomManagementDemo.API\\CustomManagementDemo.API.csproj": {}
+    "C:\\Users\\MorjanM\\OneDrive\\Desktop\\customManagementDemo\\CustomManagementDemo.API\\CustomManagementDemo.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MorjanM\\RiderProjects\\customManagementDemo\\CustomManagementDemo.API\\CustomManagementDemo.API.csproj": {
+    "C:\\Users\\MorjanM\\OneDrive\\Desktop\\customManagementDemo\\CustomManagementDemo.API\\CustomManagementDemo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MorjanM\\RiderProjects\\customManagementDemo\\CustomManagementDemo.API\\CustomManagementDemo.API.csproj",
+        "projectUniqueName": "C:\\Users\\MorjanM\\OneDrive\\Desktop\\customManagementDemo\\CustomManagementDemo.API\\CustomManagementDemo.API.csproj",
         "projectName": "CustomManagementDemo.API",
-        "projectPath": "C:\\Users\\MorjanM\\RiderProjects\\customManagementDemo\\CustomManagementDemo.API\\CustomManagementDemo.API.csproj",
+        "projectPath": "C:\\Users\\MorjanM\\OneDrive\\Desktop\\customManagementDemo\\CustomManagementDemo.API\\CustomManagementDemo.API.csproj",
         "packagesPath": "C:\\Users\\MorjanM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MorjanM\\RiderProjects\\customManagementDemo\\CustomManagementDemo.API\\obj\\",
+        "outputPath": "C:\\Users\\MorjanM\\OneDrive\\Desktop\\customManagementDemo\\CustomManagementDemo.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MorjanM\\AppData\\Roaming\\NuGet\\NuGet.Config",
