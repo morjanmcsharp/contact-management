@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0PM0d7e+wU2IHmX7KvD8i8zVEZnr57bgeexe6H87rE0=",
+  "Source": "CustomManagementDemo.API",
+  "BasePath": "_content/CustomManagementDemo.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

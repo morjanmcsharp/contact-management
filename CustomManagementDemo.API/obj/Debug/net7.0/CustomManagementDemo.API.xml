@@ -1,0 +1,892 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CustomManagementDemo.API</name>
+    </assembly>
+    <members>
+        <member name="T:CustomManagementDemo.API.Controllers.CompanyController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.CompanyController.#ctor(CustomManagementDemo.API.ServiceLayer.Companies.ICompanyService)">
+            <summary>
+            
+            </summary>
+            <param name="companyService"></param>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.CompanyController.AddField(System.Int32,CustomManagementDemo.API.DomainLayer.Entities.ExtendedField)">
+            <summary>
+            Add a new field to a specific company
+            </summary>
+            <remarks>
+            The extended field has a three types { text = 1, number = 2, date = 3 };
+            TextValue should be filled when choosing text type,
+            NumberValue should be filled when choosing number type,
+            DateValue should be filled when choosing date type
+            </remarks>
+            <param name="id"></param>
+            <param name="extendedField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.CompanyController.GetFiltered(CustomManagementDemo.API.DomainLayer.Requests.PagedRequest,CustomManagementDemo.API.DomainLayer.Requests.FilterRequest)">
+            <summary>
+            Return a list of companies using filtered fields.
+            </summary>
+            <remarks>The filterName should be in PascalCase and the filterValue should be exactly the same</remarks>
+            <param name="pagedRequest"></param>
+            <param name="filterRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.CompanyController.GetAll(CustomManagementDemo.API.DomainLayer.Requests.PagedRequest)">
+            <summary>
+            Return a list of all companies
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.CompanyController.GetById(System.Int32)">
+            <summary>
+            Return a company specified by its unique id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.CompanyController.CreateAsync(CustomManagementDemo.API.DomainLayer.Requests.Companies.CreateCompanyRequest)">
+            <summary>
+            Add a new company
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.CompanyController.EditAsync(System.Int32,CustomManagementDemo.API.DomainLayer.Requests.Companies.EditCompanyRequest)">
+            <summary>
+            Update an existing company specified by its unique id
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.CompanyController.DeleteAsync(System.Int32)">
+            <summary>
+            Remove a company specified by its unique id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CustomManagementDemo.API.Controllers.ContactController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.ContactController.#ctor(CustomManagementDemo.API.ServiceLayer.Contacts.IContactService)">
+            <summary>
+            
+            </summary>
+            <param name="contactService"></param>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.ContactController.AddField(System.Int32,CustomManagementDemo.API.DomainLayer.Entities.ExtendedField)">
+            <summary>
+            Add a new field to a specific contact
+            </summary>
+            <remarks>
+            The extended field has a three types { text = 1, number = 2, date = 3 };
+            TextValue should be filled when choosing text type,
+            NumberValue should be filled when choosing number type,
+            DateValue should be filled when choosing date type</remarks>
+            <param name="id"></param>
+            <param name="extendedField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.ContactController.GetFiltered(CustomManagementDemo.API.DomainLayer.Requests.PagedRequest,CustomManagementDemo.API.DomainLayer.Requests.FilterRequest)">
+            <summary>
+            Return a list of filtered fields.
+            </summary>
+            <remarks>The filterName should be in PascalCase and the filterValue should be exactly the same</remarks>
+            <param name="pagedRequest"></param>
+            <param name="filterRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.ContactController.GetAll(CustomManagementDemo.API.DomainLayer.Requests.PagedRequest)">
+            <summary>
+            Return a list of all contacts
+            </summary>
+            <param name="pagedRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.ContactController.GetById(System.Int32)">
+            <summary>
+            Return a contact specified by its unique id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.ContactController.CreateAsync(CustomManagementDemo.API.DomainLayer.Requests.Contacts.CreateContactRequest)">
+            <summary>
+            Add a new contact
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.ContactController.EditAsync(System.Int32,CustomManagementDemo.API.DomainLayer.Requests.Contacts.EditContactRequest)">
+            <summary>
+            Update an existing contact specified by its unique id
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.Controllers.ContactController.DeleteAsync(System.Int32)">
+            <summary>
+            Remove a contact specified by its unique id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CustomManagementDemo.API.DataAccessLayer.ApplicationDbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.DataAccessLayer.ApplicationDbContext.#ctor(CustomManagementDemo.API.DataAccessLayer.Model.IDatabaseSettings)">
+            <summary>
+            
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="M:CustomManagementDemo.API.DataAccessLayer.ApplicationDbContext.GetCollection``1(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="collectionName"></param>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:CustomManagementDemo.API.DataAccessLayer.Model.DatabaseSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DataAccessLayer.Model.DatabaseSettings.ConnectionString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DataAccessLayer.Model.DatabaseSettings.DatabaseName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DataAccessLayer.Model.IDatabaseSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DataAccessLayer.Model.IDatabaseSettings.ConnectionString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DataAccessLayer.Model.IDatabaseSettings.DatabaseName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DataAccessLayer.Services.NumericIdGenerator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.DataAccessLayer.Services.NumericIdGenerator.GenerateId(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="collectionName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Constants.CollectionNames">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CustomManagementDemo.API.DomainLayer.Constants.CollectionNames.CompanyCollection">
+            <summary>
+            Name of the Company Collection
+            </summary>
+        </member>
+        <member name="F:CustomManagementDemo.API.DomainLayer.Constants.CollectionNames.ContactCollection">
+            <summary>
+            Name of the Contact Collection
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Entities.Companies.Company">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Entities.Companies.Company.Id">
+            <summary>
+            Represent the primary key of the company entity
+            </summary>
+            <example>5</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Entities.Companies.Company.Name">
+            <summary>
+            Represent the unique name of the company
+            </summary>
+            <example>Workium</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Entities.Companies.Company.EmployeesCount">
+            <summary>
+            Represent the number of the employees in the company
+            </summary>
+            <example>50</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Entities.Companies.Company.ExtendedFields">
+            <summary>
+            Represent a field that can be added, edited and removed dynamically
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Entities.Companies.Company.ContactId">
+            <summary>
+            Represent the foreign key of the contact
+            </summary>
+            <example>3</example>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Entities.Contacts.Contact">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Entities.Contacts.Contact.Id">
+            <summary>
+            Represent the primary key of the contact entity
+            </summary>
+            <example>3</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Entities.Contacts.Contact.Name">
+            <summary>
+            Represent the unique name of the contact
+            </summary>
+            <example>Morjan</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Entities.Contacts.Contact.ExtendedFields">
+            <summary>
+            Represent a field that can be added, edited and removed dynamically
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Entities.ExtendedField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Enums.FieldType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CustomManagementDemo.API.DomainLayer.Enums.FieldType.Text">
+            <summary>
+            Text
+            </summary>
+        </member>
+        <member name="F:CustomManagementDemo.API.DomainLayer.Enums.FieldType.Number">
+            <summary>
+            Number
+            </summary>
+        </member>
+        <member name="F:CustomManagementDemo.API.DomainLayer.Enums.FieldType.Date">
+            <summary>
+            Date
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.Companies.CreateCompanyRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.Companies.CreateCompanyRequest.Name">
+            <summary>
+            Represent the unique name of the company
+            </summary>
+            <example>Workium</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.Companies.CreateCompanyRequest.EmployeesCount">
+            <summary>
+            Represent the number of the employees in the company
+            </summary>
+            <example>50</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.Companies.CreateCompanyRequest.ContactId">
+            <summary>
+            Represent the foreign key of the contact
+            </summary>
+            <example>3</example>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.Companies.CreateCompanyRequestValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.DomainLayer.Requests.Companies.CreateCompanyRequestValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.Companies.CreateCompanyRequestProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.DomainLayer.Requests.Companies.CreateCompanyRequestProfile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.Companies.EditCompanyRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.Companies.EditCompanyRequest.Id">
+            <summary>
+            Represent the primary key of the company entity
+            </summary>
+            <example>5</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.Companies.EditCompanyRequest.ExtendedFields">
+            <summary>
+            Represent a field that can be added, edited and removed dynamically
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.Companies.EditCompanyRequestValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.DomainLayer.Requests.Companies.EditCompanyRequestValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.Companies.EditCompanyRequestProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.DomainLayer.Requests.Companies.EditCompanyRequestProfile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.Contacts.CreateContactRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.Contacts.CreateContactRequest.Name">
+            <summary>
+            Represent the unique name of the contact
+            </summary>
+            <example>Morjan</example>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.Contacts.CreateContactRequestValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.DomainLayer.Requests.Contacts.CreateContactRequestValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.Contacts.CreateContactRequestProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.DomainLayer.Requests.Contacts.CreateContactRequestProfile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.Contacts.EditContactRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.Contacts.EditContactRequest.Id">
+            <summary>
+            Represent the primary key of the contact entity
+            </summary>
+            <example>3</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.Contacts.EditContactRequest.ExtendedFields">
+            <summary>
+            Represent a field that can be added, edited and removed dynamically
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.Contacts.EditContactRequestValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.DomainLayer.Requests.Contacts.EditContactRequestValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.Contacts.EditContactRequestProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.DomainLayer.Requests.Contacts.EditContactRequestProfile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.FilterRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.FilterRequest.FilterName">
+            <summary>
+            Represent the name of the field to be filtered
+            </summary>
+            <example>Name</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.FilterRequest.FilterValue">
+            <summary>
+            Represent the value of the field to be filtered
+            </summary>
+            <example>Morjan</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.FilterRequest.FilterExtendedFields">
+            <summary>
+            Represent whether it is going to be the standard fields or the extended fields.
+            </summary>
+            <example>BirthDate</example>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Requests.PagedRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.PagedRequest.Page">
+            <summary>
+            Represent the page
+            </summary>
+            <example>1</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Requests.PagedRequest.PageSize">
+            <summary>
+            Represent the size of the page
+            </summary>
+            <example>10</example>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Responses.Companies.CompanyResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Responses.Companies.CompanyResponse.Id">
+            <summary>
+            Represent the primary key of the company entity
+            </summary>
+            <example>5</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Responses.Companies.CompanyResponse.Name">
+            <summary>
+            Represent the unique name of the company
+            </summary>
+            <example>Workium</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Responses.Companies.CompanyResponse.EmployeesCount">
+            <summary>
+            Represent the number of the employees in the company
+            </summary>
+            <example>50</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Responses.Companies.CompanyResponse.ExtendedFields">
+            <summary>
+            Represent a field that can be added, edited and removed dynamically
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Responses.Companies.CompanyResponse.ContactId">
+            <summary>
+            Represent the foreign key of the contact
+            </summary>
+            <example>3</example>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Responses.Companies.CompanyResponseProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.DomainLayer.Responses.Companies.CompanyResponseProfile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Responses.Contacts.ContactResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Responses.Contacts.ContactResponse.Id">
+            <summary>
+            Represent the primary key of the contact entity
+            </summary>
+            <example>3</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Responses.Contacts.ContactResponse.Name">
+            <summary>
+            Represent the unique name of the contact
+            </summary>
+            <example>Morjan</example>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Responses.Contacts.ContactResponse.ExtendedFields">
+            <summary>
+            Represent a field that can be added, edited and removed dynamically
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.DomainLayer.Responses.Contacts.ContactResponse.Companies">
+            <summary>
+            Represent a list of related companies
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.DomainLayer.Responses.Contacts.ContactResponseProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.DomainLayer.Responses.Contacts.ContactResponseProfile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.Extensions.Middlewares.GlobalExceptionHandlingMiddleware">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.Extensions.Middlewares.GlobalExceptionHandlingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CustomManagementDemo.API.Extensions.Middlewares.GlobalExceptionHandlingMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:CustomManagementDemo.API.Extensions.Middlewares.ErrorResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.Extensions.Middlewares.ErrorResponse.StatusCode">
+            <summary>
+            Represent the status code of the error 
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.Extensions.Middlewares.ErrorResponse.Message">
+            <summary>
+            Represent the message of the error
+            </summary>
+        </member>
+        <member name="P:CustomManagementDemo.API.Extensions.Middlewares.ErrorResponse.ExceptionMessage">
+            <summary>
+            Represent the exception message of the error
+            </summary>
+        </member>
+        <member name="T:CustomManagementDemo.API.Extensions.Middlewares.NotFoundException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.Extensions.Middlewares.NotFoundException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:CustomManagementDemo.API.Extensions.Services.DbServiceExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.Extensions.Services.DbServiceExtension.AddMongoDb(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="serviceCollection"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="T:CustomManagementDemo.API.Extensions.Services.FluentValidationsExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.Extensions.Services.FluentValidationsExtension.AddFluentValidations(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="serviceCollection"></param>
+        </member>
+        <member name="T:CustomManagementDemo.API.Extensions.Services.ServicesExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.Extensions.Services.ServicesExtension.AddServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="serviceCollection"></param>
+        </member>
+        <member name="T:CustomManagementDemo.API.ServiceLayer.Companies.CompanyService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.CompanyService.#ctor(CustomManagementDemo.API.DataAccessLayer.ApplicationDbContext,AutoMapper.IMapper,CustomManagementDemo.API.DataAccessLayer.Services.NumericIdGenerator)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="mapper"></param>
+            <param name="numericIdGenerator"></param>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.CompanyService.AddFieldAsync(System.Int32,CustomManagementDemo.API.DomainLayer.Entities.ExtendedField)">
+            <summary>
+            Create a new column for the company table.
+            </summary>
+            <param name="id"></param>
+            <param name="extendedField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.CompanyService.GetFiltered(CustomManagementDemo.API.DomainLayer.Requests.PagedRequest,CustomManagementDemo.API.DomainLayer.Requests.FilterRequest)">
+            <summary>
+            Return a list of filtered fields.
+            </summary>
+            <param name="pagedRequest"></param>
+            <param name="filterRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.CompanyService.GetAllAsync(CustomManagementDemo.API.DomainLayer.Requests.PagedRequest)">
+            <summary>
+            Return a list of all companies
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.CompanyService.GetByIdAsync(System.Int32)">
+            <summary>
+            Return a company specified by a unique id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.CompanyService.CreateAsync(CustomManagementDemo.API.DomainLayer.Requests.Companies.CreateCompanyRequest)">
+            <summary>
+            Create a new company
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.CompanyService.EditAsync(CustomManagementDemo.API.DomainLayer.Requests.Companies.EditCompanyRequest)">
+            <summary>
+            Edit an existing company
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.CompanyService.DeleteAsync(System.Int32)">
+            <summary>
+            Delete an existing company specified by its unique id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CustomManagementDemo.API.ServiceLayer.Companies.ICompanyService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.ICompanyService.AddFieldAsync(System.Int32,CustomManagementDemo.API.DomainLayer.Entities.ExtendedField)">
+            <summary>
+            Create a new column for the company table.
+            </summary>
+            <param name="id"></param>
+            <param name="extendedField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.ICompanyService.GetFiltered(CustomManagementDemo.API.DomainLayer.Requests.PagedRequest,CustomManagementDemo.API.DomainLayer.Requests.FilterRequest)">
+            <summary>
+            Return a list of filtered fields.
+            </summary>
+            <param name="pagedRequest"></param>
+            <param name="filterRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.ICompanyService.GetAllAsync(CustomManagementDemo.API.DomainLayer.Requests.PagedRequest)">
+            <summary>
+            Return a list of all companies
+            </summary>
+            <param name="pagedRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.ICompanyService.GetByIdAsync(System.Int32)">
+            <summary>
+            Return a company specified by a unique id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.ICompanyService.CreateAsync(CustomManagementDemo.API.DomainLayer.Requests.Companies.CreateCompanyRequest)">
+            <summary>
+            Create a new company
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.ICompanyService.EditAsync(CustomManagementDemo.API.DomainLayer.Requests.Companies.EditCompanyRequest)">
+            <summary>
+            Edit an existing company
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Companies.ICompanyService.DeleteAsync(System.Int32)">
+            <summary>
+            Delete an existing company specified by its unique id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CustomManagementDemo.API.ServiceLayer.Contacts.ContactService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.ContactService.#ctor(CustomManagementDemo.API.DataAccessLayer.ApplicationDbContext,AutoMapper.IMapper,CustomManagementDemo.API.DataAccessLayer.Services.NumericIdGenerator)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="mapper"></param>
+            <param name="numericIdGenerator"></param>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.ContactService.AddFieldAsync(System.Int32,CustomManagementDemo.API.DomainLayer.Entities.ExtendedField)">
+            <summary>
+            Create a new column for the contact table.
+            </summary>
+            <param name="id"></param>
+            <param name="extendedField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.ContactService.GetFiltered(CustomManagementDemo.API.DomainLayer.Requests.PagedRequest,CustomManagementDemo.API.DomainLayer.Requests.FilterRequest)">
+            <summary>
+            Return a list of filtered fields and values
+            </summary>
+            <param name="pagedRequest"></param>
+            <param name="filterRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.ContactService.GetAllAsync(CustomManagementDemo.API.DomainLayer.Requests.PagedRequest)">
+            <summary>
+            Return a list of all contacts
+            </summary>
+            <param name="pagedRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.ContactService.GetByIdAsync(System.Int32)">
+            <summary>
+            Return a contact specified by a unique id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.ContactService.CreateAsync(CustomManagementDemo.API.DomainLayer.Requests.Contacts.CreateContactRequest)">
+            <summary>
+            Create a new contact
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.ContactService.EditAsync(CustomManagementDemo.API.DomainLayer.Requests.Contacts.EditContactRequest)">
+            <summary>
+            Edit an existing contact
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.ContactService.DeleteAsync(System.Int32)">
+            <summary>
+            Delete an existing contact specified by its unique id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CustomManagementDemo.API.ServiceLayer.Contacts.IContactService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.IContactService.AddFieldAsync(System.Int32,CustomManagementDemo.API.DomainLayer.Entities.ExtendedField)">
+            <summary>
+            Create a new column for the contact table.
+            </summary>
+            <param name="id"></param>
+            <param name="extendedField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.IContactService.GetFiltered(CustomManagementDemo.API.DomainLayer.Requests.PagedRequest,CustomManagementDemo.API.DomainLayer.Requests.FilterRequest)">
+            <summary>
+            Return a list of filtered fields and values
+            </summary>
+            <param name="pagedRequest"></param>
+            <param name="filterRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.IContactService.GetAllAsync(CustomManagementDemo.API.DomainLayer.Requests.PagedRequest)">
+            <summary>
+            Return a list of all contacts
+            </summary>
+            <param name="pagedRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.IContactService.GetByIdAsync(System.Int32)">
+            <summary>
+            Return a contact specified by a unique id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.IContactService.CreateAsync(CustomManagementDemo.API.DomainLayer.Requests.Contacts.CreateContactRequest)">
+            <summary>
+            Create a new contact
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.IContactService.EditAsync(CustomManagementDemo.API.DomainLayer.Requests.Contacts.EditContactRequest)">
+            <summary>
+            Edit an existing contact
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomManagementDemo.API.ServiceLayer.Contacts.IContactService.DeleteAsync(System.Int32)">
+            <summary>
+            Delete an existing contact specified by its unique id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
