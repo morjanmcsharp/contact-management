@@ -1,7 +1,7 @@
 
 ## Note
 
--I built the project from scratch, opting for a straightforward approach without relying on a layered architecture. Everything has been implemented in a basic manner due to the project's small size, eliminating the need for unnecessary complexity.
+- I built the project from scratch, opting for a straightforward approach without relying on a layered architecture. Everything has been implemented in a basic manner due to the project's small size, eliminating the need for unnecessary complexity.
 
 ## Overview
 
